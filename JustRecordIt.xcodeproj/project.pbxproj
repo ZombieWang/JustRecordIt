@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012DEEF61FE3CF600040DE02 /* VoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */; };
 		0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9C1FE399080038B14C /* AppDelegate.swift */; };
-		0138DB9F1FE399080038B14C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9E1FE399080038B14C /* ViewController.swift */; };
+		0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9E1FE399080038B14C /* RecordViewController.swift */; };
 		0138DBA21FE399080038B14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA01FE399080038B14C /* Main.storyboard */; };
 		0138DBA51FE399080038B14C /* JustRecordIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0138DBA31FE399080038B14C /* JustRecordIt.xcdatamodeld */; };
 		0138DBA71FE399080038B14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA61FE399080038B14C /* Assets.xcassets */; };
@@ -27,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewController.swift; sourceTree = "<group>"; };
 		0138DB991FE399080038B14C /* JustRecordIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRecordIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0138DB9C1FE399080038B14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0138DB9E1FE399080038B14C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0138DB9E1FE399080038B14C /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		0138DBA11FE399080038B14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0138DBA41FE399080038B14C /* JustRecordIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustRecordIt.xcdatamodel; sourceTree = "<group>"; };
 		0138DBA61FE399080038B14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,12 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				0138DB9C1FE399080038B14C /* AppDelegate.swift */,
-				0138DB9E1FE399080038B14C /* ViewController.swift */,
+				0138DB9E1FE399080038B14C /* RecordViewController.swift */,
 				0138DBA01FE399080038B14C /* Main.storyboard */,
 				0138DBA61FE399080038B14C /* Assets.xcassets */,
 				0138DBA81FE399080038B14C /* LaunchScreen.storyboard */,
 				0138DBAB1FE399080038B14C /* Info.plist */,
 				0138DBA31FE399080038B14C /* JustRecordIt.xcdatamodeld */,
+				012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */,
 			);
 			path = JustRecordIt;
 			sourceTree = "<group>";
@@ -202,7 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0138DB9F1FE399080038B14C /* ViewController.swift in Sources */,
+				0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */,
+				012DEEF61FE3CF600040DE02 /* VoicesViewController.swift in Sources */,
 				0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */,
 				0138DBA51FE399080038B14C /* JustRecordIt.xcdatamodeld in Sources */,
 			);

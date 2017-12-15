@@ -30,11 +30,19 @@
                                         <state key="normal" backgroundImage="button-record"/>
                                         <state key="selected" backgroundImage="button-record1"/>
                                         <state key="highlighted" backgroundImage="button-record1"/>
+                                        <connections>
+                                            <action selector="onRecord:" destination="BYZ-38-t0r" eventType="touchDown" id="IVX-eV-t7e"/>
+                                            <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="QBt-9Y-rxd"/>
+                                            <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kWa-fk-IQQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8N-kw-nsN">
                                         <rect key="frame" x="120" y="0.0" width="85" height="93"/>
                                         <state key="normal" backgroundImage="button-play"/>
                                         <state key="highlighted" backgroundImage="button-play1"/>
+                                        <connections>
+                                            <action selector="onPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oo6-iL-rCI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,6 +93,8 @@
                         <barButtonItem key="rightBarButtonItem" title="Voices" id="W8F-zL-DfN"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="playButton" destination="C8N-kw-nsN" id="Ots-fV-loL"/>
+                        <outlet property="recordButton" destination="3nk-ob-M9M" id="ORp-2e-GA1"/>
                         <segue destination="0Ff-di-DU7" kind="show" identifier="ToVoicesViewController" id="puu-Hh-NYE"/>
                     </connections>
                 </viewController>

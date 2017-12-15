@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		012DEEF61FE3CF600040DE02 /* VoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */; };
+		012DEEF91FE413AD0040DE02 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DEEF81FE413AD0040DE02 /* RecordViewModel.swift */; };
 		0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9C1FE399080038B14C /* AppDelegate.swift */; };
 		0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9E1FE399080038B14C /* RecordViewController.swift */; };
 		0138DBA21FE399080038B14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA01FE399080038B14C /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewController.swift; sourceTree = "<group>"; };
+		012DEEF81FE413AD0040DE02 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
 		0138DB991FE399080038B14C /* JustRecordIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRecordIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0138DB9C1FE399080038B14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0138DB9E1FE399080038B14C /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012DEEF71FE4138D0040DE02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0138DB9E1FE399080038B14C /* RecordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		012DEEFA1FE413B30040DE02 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				012DEEF81FE413AD0040DE02 /* RecordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0138DB901FE399080038B14C = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +100,13 @@
 			isa = PBXGroup;
 			children = (
 				0138DB9C1FE399080038B14C /* AppDelegate.swift */,
-				0138DB9E1FE399080038B14C /* RecordViewController.swift */,
-				0138DBA01FE399080038B14C /* Main.storyboard */,
 				0138DBA61FE399080038B14C /* Assets.xcassets */,
-				0138DBA81FE399080038B14C /* LaunchScreen.storyboard */,
 				0138DBAB1FE399080038B14C /* Info.plist */,
 				0138DBA31FE399080038B14C /* JustRecordIt.xcdatamodeld */,
+				0138DBA81FE399080038B14C /* LaunchScreen.storyboard */,
+				0138DBA01FE399080038B14C /* Main.storyboard */,
+				012DEEF71FE4138D0040DE02 /* View */,
+				012DEEFA1FE413B30040DE02 /* ViewModel */,
 				012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */,
 			);
 			path = JustRecordIt;
@@ -208,6 +227,7 @@
 				0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */,
 				012DEEF61FE3CF600040DE02 /* VoicesViewController.swift in Sources */,
 				0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */,
+				012DEEF91FE413AD0040DE02 /* RecordViewModel.swift in Sources */,
 				0138DBA51FE399080038B14C /* JustRecordIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

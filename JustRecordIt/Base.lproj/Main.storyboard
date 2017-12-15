@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Record View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -77,15 +82,24 @@
                                     <constraint firstAttribute="trailing" secondItem="C8N-kw-nsN" secondAttribute="trailing" id="wBs-kE-NKB"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oD-RV-MwR">
+                                <rect key="frame" x="0.0" y="189" width="375" height="61.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="M9y-w8-x4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IwD-8S-5iQ"/>
+                            <constraint firstItem="8oD-RV-MwR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="R8q-Ik-j48"/>
+                            <constraint firstItem="8oD-RV-MwR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sia-sZ-vyH"/>
                             <constraint firstItem="OYX-pm-yqo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xtd-WP-RUe"/>
                             <constraint firstItem="OYX-pm-yqo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZML-W7-zMZ"/>
                             <constraint firstItem="OYX-pm-yqo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eDo-yq-bbb"/>
                             <constraint firstItem="OYX-pm-yqo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gt4-a6-wRJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M9y-w8-x4F" secondAttribute="bottom" constant="70" id="vRS-6h-26K"/>
+                            <constraint firstItem="8oD-RV-MwR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vWB-wr-7gd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -95,6 +109,7 @@
                     <connections>
                         <outlet property="playButton" destination="C8N-kw-nsN" id="Ots-fV-loL"/>
                         <outlet property="recordButton" destination="3nk-ob-M9M" id="ORp-2e-GA1"/>
+                        <outlet property="statusLabel" destination="8oD-RV-MwR" id="rGW-RD-f90"/>
                         <segue destination="0Ff-di-DU7" kind="show" identifier="ToVoicesViewController" id="puu-Hh-NYE"/>
                     </connections>
                 </viewController>

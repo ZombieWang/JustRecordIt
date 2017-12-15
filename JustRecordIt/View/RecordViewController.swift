@@ -12,6 +12,7 @@ import AVFoundation
 class RecordViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
     
     private var viewModel: RecordViewModel!
     
@@ -20,6 +21,7 @@ class RecordViewController: UIViewController {
         
         viewModel = RecordViewModel(viewController: self)
         
+        statusLabel.text = nil
         playButton.isHidden = true
     }
     
@@ -33,6 +35,8 @@ class RecordViewController: UIViewController {
     
     @IBAction func onRecord(_ sender: UIButton) {
         recordButton.setBackgroundImage(UIImage(named: "button-record1"), for: .normal)
+        statusLabel.text = "Recording..."
+        
         viewModel.setupRecorder()
         viewModel.record()
     }
@@ -41,21 +45,25 @@ class RecordViewController: UIViewController {
         recordButton.setBackgroundImage(UIImage(named: "button-record"), for: .normal)
         viewModel.stopRecording()
         
+        statusLabel.text = nil
         playButton.isHidden = false
     }
     
     @IBAction func onPlay(_ sender: UIButton) {
         viewModel.play()
+        statusLabel.text = "Playing..."
     }
 }
 
 extension RecordViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         setPlayButtonOn(flag: false)
+        statusLabel.text = nil
     }
 }
 
 extension RecordViewController: AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        statusLabel.text = nil
     }
 }

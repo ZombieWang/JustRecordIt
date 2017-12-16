@@ -37,7 +37,6 @@ class RecordViewController: UIViewController {
         recordButton.setBackgroundImage(UIImage(named: "button-record1"), for: .normal)
         statusLabel.text = "Recording..."
         
-        viewModel.setupRecorder()
         viewModel.record()
     }
     

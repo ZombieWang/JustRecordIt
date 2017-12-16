@@ -27,7 +27,7 @@ class RecordViewModelTests: XCTestCase {
     }
     
     func testSaveData() {
-        sut.setupRecorder()
+        sut.record()
         sut.stopRecording()
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "VoiceMemo")

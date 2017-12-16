@@ -8,15 +8,12 @@
 
 import Foundation
 import UIKit
-import AVFoundation
 import CoreData
 
 class RecordViewModel {
     private let appDelegate: AppDelegate
     private let context: NSManagedObjectContext
     private var viewController: RecordViewController!
-    var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer!
     var lastRestoredDateTime: Date?
     
     init(viewController: RecordViewController) {
@@ -26,57 +23,27 @@ class RecordViewModel {
         context = appDelegate.persistentContainer.viewContext
     }
     
-    func setupRecorder() {
-        lastRestoredDateTime = Date()
-        let fileURL = getURLforAudio(dateTime: lastRestoredDateTime!)
-        
-        let recordSettings: [String : Any] = [
-            AVFormatIDKey: Int(kAudioFormatLinearPCM),
-            AVSampleRateKey: 44100.0,
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-        ]
-        
-        do {
-            audioRecorder = try AVAudioRecorder(url: fileURL, settings: recordSettings)
-            audioRecorder.delegate = viewController
-            audioRecorder.prepareToRecord()
-        } catch {
-            print("Error creating audioRecorder.")
-        }
-    }
-    
     // MARK: Recording
     func record() {
-        audioRecorder.record()
+           lastRestoredDateTime = Date()
+        RecorderManager.shared.setupRecorder(viewController: viewController, lastRestoredDateTime: lastRestoredDateTime!)
+        RecorderManager.shared.record()
     }
     
     func stopRecording() {
-        audioRecorder.stop()
+        RecorderManager.shared.stopRecording()
         saveData(savedDateTime: lastRestoredDateTime!)
     }
     
     // MARK: Playback
     func play() {
-        if let lastSavedDateTime = lastRestoredDateTime {
-            let fileURL = getURLforAudio(dateTime: lastSavedDateTime)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
-                audioPlayer.delegate = viewController
-                
-                if audioPlayer.duration > 0.0 {
-                    audioPlayer.play()
-                }
-            } catch {
-                print("Error loading audioPlayer.")
-            }
-        } else {
-            print("No saved voice memo.")
+        if let lastRestoredDateTime = lastRestoredDateTime {
+            RecorderManager.shared.play(viewController: viewController, savedTime: lastRestoredDateTime)
         }
     }
     
     func stopPlayback() {
-        audioPlayer.stop()
+        RecorderManager.shared.stopPlayback()
     }
     
     // MARK: Save to CoreData

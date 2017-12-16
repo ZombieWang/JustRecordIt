@@ -18,6 +18,7 @@
 		019BB3F41FE56A0A005E06AB /* RecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3F31FE56A0A005E06AB /* RecordViewModelTests.swift */; };
 		019BB3F71FE579A2005E06AB /* VoicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3F61FE579A2005E06AB /* VoicesViewModel.swift */; };
 		019BB3F91FE57A86005E06AB /* RecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3F81FE57A86005E06AB /* RecorderManager.swift */; };
+		019BB3FC1FE58943005E06AB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3FB1FE58943005E06AB /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		019BB3F31FE56A0A005E06AB /* RecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModelTests.swift; sourceTree = "<group>"; };
 		019BB3F61FE579A2005E06AB /* VoicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewModel.swift; sourceTree = "<group>"; };
 		019BB3F81FE57A86005E06AB /* RecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderManager.swift; sourceTree = "<group>"; };
+		019BB3FB1FE58943005E06AB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		019BB3FA1FE58667005E06AB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				019BB3FB1FE58943005E06AB /* CoreDataManager.swift */,
 				019BB3F81FE57A86005E06AB /* RecorderManager.swift */,
 			);
 			path = Util;
@@ -261,6 +264,7 @@
 				019BB3F91FE57A86005E06AB /* RecorderManager.swift in Sources */,
 				019BB3F71FE579A2005E06AB /* VoicesViewModel.swift in Sources */,
 				019BB3E31FE4D07C005E06AB /* VoicesViewController.swift in Sources */,
+				019BB3FC1FE58943005E06AB /* CoreDataManager.swift in Sources */,
 				0138DBA51FE399080038B14C /* JustRecordIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -64,6 +64,6 @@ extension RecordViewController: AVAudioPlayerDelegate {
 
 extension RecordViewController: AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        statusLabel.text = nil
+        statusLabel?.text = nil
     }
 }

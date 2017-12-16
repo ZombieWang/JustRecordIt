@@ -14,8 +14,8 @@
 		0138DBA51FE399080038B14C /* JustRecordIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0138DBA31FE399080038B14C /* JustRecordIt.xcdatamodeld */; };
 		0138DBA71FE399080038B14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA61FE399080038B14C /* Assets.xcassets */; };
 		0138DBAA1FE399080038B14C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA81FE399080038B14C /* LaunchScreen.storyboard */; };
-		0138DBB51FE399080038B14C /* JustRecordItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DBB41FE399080038B14C /* JustRecordItTests.swift */; };
 		019BB3E31FE4D07C005E06AB /* VoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3E21FE4D07C005E06AB /* VoicesViewController.swift */; };
+		019BB3F41FE56A0A005E06AB /* RecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3F31FE56A0A005E06AB /* RecordViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,9 @@
 		0138DBA91FE399080038B14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0138DBAB1FE399080038B14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0138DBB01FE399080038B14C /* JustRecordItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustRecordItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0138DBB41FE399080038B14C /* JustRecordItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustRecordItTests.swift; sourceTree = "<group>"; };
 		0138DBB61FE399080038B14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		019BB3E21FE4D07C005E06AB /* VoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewController.swift; sourceTree = "<group>"; };
+		019BB3F31FE56A0A005E06AB /* RecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +115,8 @@
 		0138DBB31FE399080038B14C /* JustRecordItTests */ = {
 			isa = PBXGroup;
 			children = (
-				0138DBB41FE399080038B14C /* JustRecordItTests.swift */,
 				0138DBB61FE399080038B14C /* Info.plist */,
+				019BB3F51FE56A11005E06AB /* ViewModel */,
 			);
 			path = JustRecordItTests;
 			sourceTree = "<group>";
@@ -127,6 +127,14 @@
 				0138DBA31FE399080038B14C /* JustRecordIt.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		019BB3F51FE56A11005E06AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				019BB3F31FE56A0A005E06AB /* RecordViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +191,7 @@
 					};
 					0138DBAF1FE399080038B14C = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0138DB981FE399080038B14C;
 					};
@@ -244,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0138DBB51FE399080038B14C /* JustRecordItTests.swift in Sources */,
+				019BB3F41FE56A0A005E06AB /* RecordViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +429,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JustRecordItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZombieWang.JustRecordItTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustRecordIt.app/JustRecordIt";
@@ -436,6 +447,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JustRecordItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

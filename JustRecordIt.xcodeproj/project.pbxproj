@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		012DEEF61FE3CF600040DE02 /* VoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */; };
 		012DEEF91FE413AD0040DE02 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DEEF81FE413AD0040DE02 /* RecordViewModel.swift */; };
 		0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9C1FE399080038B14C /* AppDelegate.swift */; };
 		0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DB9E1FE399080038B14C /* RecordViewController.swift */; };
@@ -16,6 +15,9 @@
 		0138DBA71FE399080038B14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA61FE399080038B14C /* Assets.xcassets */; };
 		0138DBAA1FE399080038B14C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138DBA81FE399080038B14C /* LaunchScreen.storyboard */; };
 		0138DBB51FE399080038B14C /* JustRecordItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138DBB41FE399080038B14C /* JustRecordItTests.swift */; };
+		019BB3E31FE4D07C005E06AB /* VoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3E21FE4D07C005E06AB /* VoicesViewController.swift */; };
+		019BB3EE1FE4D367005E06AB /* VoiceMemo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3EC1FE4D367005E06AB /* VoiceMemo+CoreDataClass.swift */; };
+		019BB3EF1FE4D367005E06AB /* VoiceMemo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3ED1FE4D367005E06AB /* VoiceMemo+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewController.swift; sourceTree = "<group>"; };
 		012DEEF81FE413AD0040DE02 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
 		0138DB991FE399080038B14C /* JustRecordIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRecordIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0138DB9C1FE399080038B14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +43,9 @@
 		0138DBB01FE399080038B14C /* JustRecordItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustRecordItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0138DBB41FE399080038B14C /* JustRecordItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustRecordItTests.swift; sourceTree = "<group>"; };
 		0138DBB61FE399080038B14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019BB3E21FE4D07C005E06AB /* VoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewController.swift; sourceTree = "<group>"; };
+		019BB3EC1FE4D367005E06AB /* VoiceMemo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VoiceMemo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		019BB3ED1FE4D367005E06AB /* VoiceMemo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VoiceMemo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				0138DB9E1FE399080038B14C /* RecordViewController.swift */,
+				019BB3E21FE4D07C005E06AB /* VoicesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,15 +104,15 @@
 		0138DB9B1FE399080038B14C /* JustRecordIt */ = {
 			isa = PBXGroup;
 			children = (
+				0138DBAB1FE399080038B14C /* Info.plist */,
 				0138DB9C1FE399080038B14C /* AppDelegate.swift */,
 				0138DBA61FE399080038B14C /* Assets.xcassets */,
-				0138DBAB1FE399080038B14C /* Info.plist */,
 				0138DBA31FE399080038B14C /* JustRecordIt.xcdatamodeld */,
 				0138DBA81FE399080038B14C /* LaunchScreen.storyboard */,
 				0138DBA01FE399080038B14C /* Main.storyboard */,
+				019BB3F11FE4D3CC005E06AB /* Model */,
 				012DEEF71FE4138D0040DE02 /* View */,
 				012DEEFA1FE413B30040DE02 /* ViewModel */,
-				012DEEF51FE3CF600040DE02 /* VoicesViewController.swift */,
 			);
 			path = JustRecordIt;
 			sourceTree = "<group>";
@@ -119,6 +124,15 @@
 				0138DBB61FE399080038B14C /* Info.plist */,
 			);
 			path = JustRecordItTests;
+			sourceTree = "<group>";
+		};
+		019BB3F11FE4D3CC005E06AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				019BB3EC1FE4D367005E06AB /* VoiceMemo+CoreDataClass.swift */,
+				019BB3ED1FE4D367005E06AB /* VoiceMemo+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +239,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */,
-				012DEEF61FE3CF600040DE02 /* VoicesViewController.swift in Sources */,
 				0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */,
 				012DEEF91FE413AD0040DE02 /* RecordViewModel.swift in Sources */,
+				019BB3E31FE4D07C005E06AB /* VoicesViewController.swift in Sources */,
+				019BB3EF1FE4D367005E06AB /* VoiceMemo+CoreDataProperties.swift in Sources */,
+				019BB3EE1FE4D367005E06AB /* VoiceMemo+CoreDataClass.swift in Sources */,
 				0138DBA51FE399080038B14C /* JustRecordIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,7 +39,9 @@ extension VoicesViewController: UITableViewDataSource {
                 
                 if let currentPlayingRow = viewModel.currentPlayingRow, currentPlayingRow == indexPath.row {
                     cell.playingStatusLabel.text = "Playing..."
+                    cell.playButton.setBackgroundImage(UIImage(named: "button-play1"), for: .normal)
                 } else {
+                    cell.playButton.setBackgroundImage(UIImage(named: "button-play"), for: .normal)
                     cell.playingStatusLabel.text = nil
                 }
                 

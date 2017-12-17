@@ -50,6 +50,8 @@ class RecordViewController: UIViewController {
     
     @IBAction func onPlay(_ sender: UIButton) {
         viewModel.play()
+        
+        setPlayButtonOn(flag: true)
         statusLabel.text = "Playing..."
     }
     

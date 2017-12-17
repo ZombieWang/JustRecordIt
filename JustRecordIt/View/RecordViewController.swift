@@ -50,7 +50,13 @@ class RecordViewController: UIViewController {
     
     @IBAction func onPlay(_ sender: UIButton) {
         viewModel.play()
+        
+        setPlayButtonOn(flag: true)
         statusLabel.text = "Playing..."
+    }
+    
+    @IBAction func VoicesButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ToVoicesViewController", sender: nil)
     }
 }
 

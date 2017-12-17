@@ -23,7 +23,7 @@ final class CoreDataManager {
     // MARK: Save to CoreData
     func saveData(savedDateTime: Date) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSS"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
         
         let dateString = dateFormatter.string(from: savedDateTime)
         

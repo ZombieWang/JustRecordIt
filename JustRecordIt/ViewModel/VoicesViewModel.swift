@@ -12,5 +12,20 @@ import AVFoundation
 import CoreData
 
 class VoicesViewModel {
+    private var viewController: VoicesViewController!
+    var data: [NSManagedObject] = []
+    var currentPlayingRow: Int?
     
+    init(viewController: VoicesViewController) {
+        self.viewController = viewController
+        data = CoreDataManager.shared.fetchData()
+    }
+
+    func play(viewController: VoicesViewController, savedTime: Date) {
+        RecorderManager.shared.play(viewController: viewController, savedTime: savedTime)
+    }
+    
+    func stop() {
+        RecorderManager.shared.stopPlayback()
+    }
 }

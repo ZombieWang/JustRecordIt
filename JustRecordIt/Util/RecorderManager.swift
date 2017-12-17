@@ -70,7 +70,7 @@ final class RecorderManager {
     
     private func getURLforAudio(dateTime: Date) -> URL {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSS"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
         
         let dateString = dateFormatter.string(from: dateTime)
         

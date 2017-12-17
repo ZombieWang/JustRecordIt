@@ -52,6 +52,10 @@ class RecordViewController: UIViewController {
         viewModel.play()
         statusLabel.text = "Playing..."
     }
+    
+    @IBAction func VoicesButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ToVoicesViewController", sender: nil)
+    }
 }
 
 extension RecordViewController: AVAudioPlayerDelegate {

@@ -12,8 +12,8 @@ import AVFoundation
 
 final class RecorderManager {
     static let shared = RecorderManager()
-    var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer!
+    private var audioRecorder: AVAudioRecorder!
+    private var audioPlayer: AVAudioPlayer!
     
     private init() {}
     
@@ -49,19 +49,19 @@ final class RecorderManager {
     
     // MARK: Playback
     func play(viewController: UIViewController, savedTime: Date) {
-            let fileURL = getURLforAudio(dateTime: savedTime)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
-                if let currentViewController = viewController as? AVAudioPlayerDelegate {
-                    audioPlayer.delegate = currentViewController
-                }
-                
-                if audioPlayer.duration > 0.0 {
-                    audioPlayer.play()
-                }
-            } catch {
-                print("Error loading audioPlayer.")
+        let fileURL = getURLforAudio(dateTime: savedTime)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+            if let currentViewController = viewController as? AVAudioPlayerDelegate {
+                audioPlayer.delegate = currentViewController
             }
+            
+            if audioPlayer.duration > 0.0 {
+                audioPlayer.play()
+            }
+        } catch {
+            print("Error loading audioPlayer.")
+        }
     }
     
     func stopPlayback() {
@@ -70,7 +70,7 @@ final class RecorderManager {
     
     private func getURLforAudio(dateTime: Date) -> URL {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:00"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSS"
         
         let dateString = dateFormatter.string(from: dateTime)
         

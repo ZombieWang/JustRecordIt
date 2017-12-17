@@ -19,6 +19,7 @@
 		019BB3F71FE579A2005E06AB /* VoicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3F61FE579A2005E06AB /* VoicesViewModel.swift */; };
 		019BB3F91FE57A86005E06AB /* RecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3F81FE57A86005E06AB /* RecorderManager.swift */; };
 		019BB3FC1FE58943005E06AB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BB3FB1FE58943005E06AB /* CoreDataManager.swift */; };
+		01A423381FE645A7003A5315 /* VoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A423371FE645A7003A5315 /* VoiceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		019BB3F61FE579A2005E06AB /* VoicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesViewModel.swift; sourceTree = "<group>"; };
 		019BB3F81FE57A86005E06AB /* RecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderManager.swift; sourceTree = "<group>"; };
 		019BB3FB1FE58943005E06AB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		01A423371FE645A7003A5315 /* VoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				0138DB9E1FE399080038B14C /* RecordViewController.swift */,
 				019BB3E21FE4D07C005E06AB /* VoicesViewController.swift */,
+				01A423371FE645A7003A5315 /* VoiceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				0138DB9F1FE399080038B14C /* RecordViewController.swift in Sources */,
 				0138DB9D1FE399080038B14C /* AppDelegate.swift in Sources */,
 				012DEEF91FE413AD0040DE02 /* RecordViewModel.swift in Sources */,
+				01A423381FE645A7003A5315 /* VoiceTableViewCell.swift in Sources */,
 				019BB3F91FE57A86005E06AB /* RecorderManager.swift in Sources */,
 				019BB3F71FE579A2005E06AB /* VoicesViewModel.swift in Sources */,
 				019BB3E31FE4D07C005E06AB /* VoicesViewController.swift in Sources */,

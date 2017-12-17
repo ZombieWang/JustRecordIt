@@ -23,7 +23,7 @@ final class CoreDataManager {
     // MARK: Save to CoreData
     func saveData(savedDateTime: Date) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:00"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSS"
         
         let dateString = dateFormatter.string(from: savedDateTime)
         
@@ -37,6 +37,17 @@ final class CoreDataManager {
             print("VoiceMemo saved.")
         } catch {
             print("There was an error.")
+        }
+    }
+    
+    func fetchData() -> [NSManagedObject] {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "VoiceMemo")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            return try context.fetch(request) as! [NSManagedObject]
+        } catch {
+            return [NSManagedObject]()
         }
     }
 }

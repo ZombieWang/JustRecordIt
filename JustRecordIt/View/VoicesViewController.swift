@@ -23,6 +23,10 @@ class VoicesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        viewModel.stop()
+    }
 }
 
 extension VoicesViewController: UITableViewDataSource {

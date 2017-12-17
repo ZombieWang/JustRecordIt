@@ -25,6 +25,12 @@ class RecordViewController: UIViewController {
         playButton.isHidden = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        viewModel.stopPlayback()
+        setPlayButtonOn(flag: false)
+        statusLabel.text = nil
+    }
+    
     private func setPlayButtonOn(flag: Bool) {
         if flag {
             playButton.setBackgroundImage(UIImage(named: "button-play1"), for: .normal)

@@ -8,8 +8,8 @@
 
 import Foundation
 
-class RecordViewModel {
-    private var viewController: RecordViewController!
+final class RecordViewModel {
+    private unowned let viewController: RecordViewController
     var lastRestoredDateTime: Date?
     
     init(viewController: RecordViewController) {

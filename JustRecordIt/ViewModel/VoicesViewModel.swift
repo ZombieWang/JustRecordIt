@@ -11,8 +11,8 @@ import UIKit
 import AVFoundation
 import CoreData
 
-class VoicesViewModel {
-    private var viewController: VoicesViewController!
+final class VoicesViewModel {
+    private unowned let viewController: VoicesViewController
     var data: [NSManagedObject] = []
     var currentPlayingRow: Int?
     

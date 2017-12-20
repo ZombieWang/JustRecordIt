@@ -13,7 +13,7 @@ import AVFoundation
 class VoicesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: VoicesViewModel!
+    private var viewModel: VoicesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

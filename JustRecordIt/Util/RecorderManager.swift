@@ -65,7 +65,7 @@ final class RecorderManager {
     }
     
     func stopPlayback() {
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
     
     private func getURLforAudio(dateTime: Date) -> URL {
